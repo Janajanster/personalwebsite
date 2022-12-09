@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- SEO -->
+<meta name="description" content="Jana Thiel, founder of Janatürlich Design, Nymphenburger Str. 81, 80636 Munich, Germany. E-Mail: janatürlich@gmail.com. Here you can find my contact form. Send me a message and I will respond as fast as I can.">
+<meta name="author" content="Jana Thiel">
+<meta name="keywords" content="Jana Thiel, Janatürlich Design, HTML, CSS, Web Design, Web Developer, Freelancer, Graphic Design">
+	
+<title>Janatürlich Design - My Personal Portfolio As A Web Designer</title>
+
+<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+<link href="css/all.min.css" rel="stylesheet">
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+	<header class="bg-img-contact">
+		<div class="headline">
+			<h1>Get in touch</h1>
+			<p>I am available for any freelance project</p>
+		</div>
+		<a class="contact-fix" href="contact.html"><i class="fas fa-feather-alt"></i></a>
+	</header>
+	
+	<input type="checkbox" id="navchecker">
+	<nav id="topnav">
+		<p class="label-nav"><label for="navchecker">&#8801;</label></p>
+		<a href="index.html"><img class="logo" src="img/favicon.png" alt="Logo"></a>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="designs.html">Designs</a></li>
+			<li><a href="about.html">About me</a></li>
+			<li><a href="relax.html">Relax Lounge</a></li>
+			<li><a class="active-link" href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		
+		<div class="flex">
+		<section class=" center wrap-1200">
+			<h1 class="mini-headline">Leave me a message</h1>
+		</section>
+		</div>
+		
+		<div class="contact-container wrap-1200" >
+			<form action="action_page.php">
+			<label for="fname">First Name</label>
+			<input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+			<label for="lname">Last Name</label>
+			<input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+			<label for="email">Your email</label>
+			<input type="email" id="email" name="email" required>
+			<label for="phonenr">Your phone number <em>(optional)</em></label>
+			<input type="tel" id="phonenr" name="telefon">
+			<label for="country">Country</label>
+			<select id="country" name="country">
+			  <option value="germany">Germany</option>
+			  <option value="canada">Canada</option>
+			  <option value="spain">Spain</option>
+			  <option value="france">France</option>
+			  <option value="australia">Australia</option>
+			  <option value="brazil">Brazil</option>
+			</select>
+			<label for="subject">Your Message</label>
+			<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+			<p class="contact-checkbox"><input type="checkbox" name="DSGVO" value="anerkannt" required> I agree that my data will be transmitted to <strong>Janatürlich Design</strong></p>
+			<input type="submit" value="submit">
+			</form>
+		</div> 
+	
+	</main>
+	
+	<footer class="center">
+			<div class="social-media">
+				<h4>Get in touch</h4>
+				<div class="fontawesome">
+					<a href="https://www.instagram.com/janajanster/" target="_blank"><i class="fab fa-2x fa-instagram instagram"></i></a>
+					<a href="https://www.facebook.com/jana.thiel.90" target="_blank"><i class="fab fa-2x fa-facebook facebook"></i></a>
+					<a href="https://www.linkedin.com/in/janathiel/?originalSubdomain=de" target="_blank"><i class="fab fa-2x fa-linkedin linkedin"></i></a>
+				</div>
+			</div>
+			<div class="contact">
+				<h4>Contact me</h4>
+				<a class="border" href="tel:01637649020">+49 89 347 55912</a>
+				<a class="border" href="mailto:janaceline@gmx.de">janatuerlich.design@gmail.com</a>
+			</div>
+			<div class="rechtliches">
+				<h4>&nbsp;</h4>
+				<a href="datenschutz.html">Datenschutz</a>
+				<a href="impressum.html">Impressum</a>
+			</div>
+	</footer>
+	
+	<div id="back-top">
+		<a href="#">&uarr;</a>
+	</div>
+	
+	
+	
+<script src="js/jquery-3.5.1.js"></script>
+<script>
+	$(document).ready(function(){
+			//button ein/ausblenden ----
+			$(window).scroll(function(){
+				if($(window).scrollTop() > 1000) {
+					$('#back-top').fadeIn(1000);
+				}
+				else {
+					$('#back-top').fadeOut(1000);
+				}
+			});
+			
+			//bei click langsam nach oben scrollen
+			$('#back-top a').click(function(){
+				$('html,body').animate({scrollTop:0},1000);
+				return false;
+			});
+		
+		/*** Cookies ***/
+			const cookieBox = document.querySelector(".wrapper"),
+			acceptBtn = cookieBox.querySelector("button");
+			acceptBtn.addEventListener("click",function(){
+			  //setting cookie for 1 month, after one month it'll be expired automatically
+				document.cookie = "CookieBy=CodingNepal; max-age="+60*60*24*30;
+			  if(document.cookie){ //if cookie is set
+				cookieBox.classList.add("hide"); //hide cookie box
+			  }else{ //if cookie not set then alert an error
+				alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
+			  }
+			});
+			let checkCookie = document.cookie.indexOf("CookieBy=CodingNepal"); //checking our cookie
+			//if cookie is set then hide the cookie box else show it
+			checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
+		
+		});
+</script>	
+</body>
+</html>

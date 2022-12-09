@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- SEO -->
+<meta name="description" content="I'm Jana, working as a freelance web designer currently from Munich in beautiful Bavaria. I'm also a journalist but I take on every creative challenge you have in your mind because that is my passion. Here you can read more about myself.">
+<meta name="author" content="Jana Thiel">
+<meta name="keywords" content="Jana Thiel, Janatürlich Design, HTML, CSS, Web Design, Web Developer, Freelancer, Graphic Design">
+	
+<title>Janatürlich Design - My Personal Portfolio As A Web Designer</title>
+
+<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+<link href="css/all.min.css" rel="stylesheet">
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+	<header class="header-about">
+		<div class="zweispalter flex wrap-1200">
+			<div><img class="responsive" src="img/aboutme600x600.jpg" alt="me"></div>
+			<div class="pad5 about-text">
+				<h1>A little bit about me</h1>
+				<hr>
+				<p>I'm Jana, a web designer working remotely from beautiful Brazil. Originally I studied journalism in Germany and Barcelona and decided to enter the web developer and graphic design world out of passion.</p>
+
+				<p>I happily take on any freelance projects in the area of web design, graphic design, UI/UX, photography and my forever passion: writing your story.</p>
+
+				<p>Send me a message and I will get back to you. And most definately we will figure out something great.</p>
+			</div>
+		</div>
+		<a class="contact-fix" href="contact.html"><i class="fas fa-feather-alt"></i></a>
+	</header>
+	
+	<input type="checkbox" id="navchecker">
+	<nav id="topnav">
+		<p class="label-nav"><label for="navchecker">&#8801;</label></p>
+		<a href="index.html"><img class="logo" src="img/favicon.png" alt="Logo"></a>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="designs.html">Designs</a></li>
+			<li><a class="active-link" href="about.html">About me</a></li>
+			<li><a href="relax.html">Relax Lounge</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+	
+	<main>
+		
+		<div class="flex">
+		<section class="cv wrap-1200">
+			<div class="center">
+				<h2 class="mini-headline">Curriculum Vitae</h2>
+			</div>
+			
+			<div class="flex-cv">
+				<div class="download-container">
+					<img src="img/Lebenslauf-Foto.png" alt="CV">
+					<a class="download-btn" href="img/Lebenslauf_Jana.pdf" download target="_blank">&#8595;</a>
+				</div>
+				<div class="arrow">
+					<p>&#8592;</p>
+				</div>
+				<div>
+					<p>
+						Have a look at my personal CV.<br>
+						Click the button to download it.
+					</p>
+				</div>
+			</div>
+		</section>
+		</div>
+	
+	</main>
+	
+	<footer class="center">
+			<div class="social-media">
+				<h4>Get in touch</h4>
+				<div class="fontawesome">
+					<a href="https://www.instagram.com/janajanster/" target="_blank"><i class="fab fa-2x fa-instagram instagram"></i></a>
+					<a href="https://www.facebook.com/jana.thiel.90" target="_blank"><i class="fab fa-2x fa-facebook facebook"></i></a>
+					<a href="https://www.linkedin.com/in/janathiel/?originalSubdomain=de" target="_blank"><i class="fab fa-2x fa-linkedin linkedin"></i></a>
+				</div>
+			</div>
+			<div class="contact">
+				<h4>Contact me</h4>
+				<a class="border" href="tel:01637649020">+49 89 347 55912</a>
+				<a class="border" href="mailto:janaceline@gmx.de">janatuerlich.design@gmail.com</a>
+			</div>
+			<div class="rechtliches">
+				<h4>&nbsp;</h4>
+				<a href="datenschutz.html">Datenschutz</a>
+				<a href="impressum.html">Impressum</a>
+			</div>
+	</footer>
+	
+	<div id="back-top">
+		<a href="#">&uarr;</a>
+	</div>
+	
+
+	
+<script src="js/jquery-3.5.1.js"></script>
+<script>
+	$(document).ready(function(){
+			//button ein/ausblenden ----
+			$(window).scroll(function(){
+				if($(window).scrollTop() > 1000) {
+					$('#back-top').fadeIn(1000);
+				}
+				else {
+					$('#back-top').fadeOut(1000);
+				}
+			});
+			
+			//bei click langsam nach oben scrollen
+			$('#back-top a').click(function(){
+				$('html,body').animate({scrollTop:0},1000);
+				return false;
+			});
+		
+		});
+</script>	
+</body>
+</html>
